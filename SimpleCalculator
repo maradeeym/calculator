@@ -20,7 +20,7 @@ int main() {
 
         cin >> op;
         
-        if (op == 'q'){
+        if (op == 'q') {
             
             cout << "Thank you for using my SimpleCalculator" << endl;
             flag = false;
@@ -31,8 +31,19 @@ int main() {
     
     cout << "Type the first number ";
     cin >> num1;
+            if (cin.fail()) {
+                cout << "Numbers only plzz" << endl;
+                cin.clear();
+            }
+        
     cout << "Type the second number ";
     cin >> num2;
+        if (cin.fail()) {
+            cout << "Numbers only plzz" << endl;
+            cin.clear();
+        
+        }
+            
     
     switch (op) {
         case '+':
@@ -58,6 +69,7 @@ int main() {
             cout << "Error, big error... Nothing to calculate.";
             break;
             }
+        
         }
     }
     return 0;
